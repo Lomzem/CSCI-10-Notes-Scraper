@@ -1,0 +1,67 @@
+[
+  {
+    "id": 271153,
+    "name": "Course Materials and Resources",
+    "position": 1,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "state": "completed",
+    "completed_at": "2024-01-23T16:06:23Z",
+    "items_count": 13,
+    "items_url": "https://canvas.butte.edu/api/v1/courses/33114/modules/271153/items"
+  },
+  {
+    "id": 271154,
+    "name": "Code Projects",
+    "position": 2,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "state": "completed",
+    "completed_at": "2024-01-23T16:06:23Z",
+    "items_count": 5,
+    "items_url": "https://canvas.butte.edu/api/v1/courses/33114/modules/271154/items"
+  },
+  {
+    "id": 271155,
+    "name": "Written Assignments",
+    "position": 3,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "state": "completed",
+    "completed_at": "2024-01-23T16:06:23Z",
+    "items_count": 2,
+    "items_url": "https://canvas.butte.edu/api/v1/courses/33114/modules/271155/items"
+  },
+  {
+    "id": 271156,
+    "name": "In-Class Assignments (No Late Work/Makeups)",
+    "position": 4,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "state": "completed",
+    "completed_at": "2024-01-23T16:06:23Z",
+    "items_count": 8,
+    "items_url": "https://canvas.butte.edu/api/v1/courses/33114/modules/271156/items"
+  },
+  {
+    "id": 271157,
+    "name": "Lecture Notes",
+    "position": 5,
+    "unlock_at": null,
+    "require_sequential_progress": false,
+    "publish_final_grade": false,
+    "prerequisite_module_ids": [],
+    "state": "completed",
+    "completed_at": "2024-01-23T16:06:23Z",
+    "items_count": 14,
+    "items_url": "https://canvas.butte.edu/api/v1/courses/33114/modules/271157/items"
+  }
+]
