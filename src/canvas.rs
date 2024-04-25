@@ -1,11 +1,16 @@
 use serde::{Deserialize, Serialize};
 use url::Url;
 
-#[derive(Debug, Serialize, Deserialize)]
-pub struct LectureNote {
-    // pub id: u32,
+#[derive(Debug, Deserialize)]
+struct Module {
+    items: Vec<Note>,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct Note {
+    pub id: usize,
     pub title: String,
-    pub html_url: String,
+    pub html_url: Url,
 }
 
 pub struct Canvas {
@@ -19,11 +24,14 @@ impl Canvas {
 
     fn modules_endpoint(&self, course_id: &u32, module_id: &u32) -> Result<Url, url::ParseError> {
         let url = format!(
-            "https://canvas.butte.edu/api/v1/courses/{}/modules/{}/items",
+            "https://canvas.butte.edu/api/v1/courses/{}/modules/{}",
             &course_id, &module_id,
         );
 
-        let params = [("access_token", &self.access_key)];
+        let params = [
+            ("access_token", &self.access_key),
+            ("include", &"items".to_string()),
+        ];
 
         Url::parse_with_params(&url, params)
     }
@@ -32,11 +40,8 @@ impl Canvas {
         &self,
         course_id: &u32,
         module_id: &u32,
-    ) -> anyhow::Result<Vec<LectureNote>> {
+    ) -> anyhow::Result<Vec<Note>> {
         let url = self.modules_endpoint(&course_id, &module_id)?;
-        let text = reqwest::get(url.clone()).await?.text().await?;
-        std::fs::File("s");
-        println!("{text}");
-        Ok(reqwest::get(url).await?.json::<Vec<LectureNote>>().await?)
+        Ok(reqwest::get(url).await?.json::<Module>().await?.items)
     }
 }
